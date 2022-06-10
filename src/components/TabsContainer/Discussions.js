@@ -1,13 +1,13 @@
 import React from 'react'
 import "./Discussions.css"
-import CodeIcon from '@mui/icons-material/Code';
+import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 
 
 function Discussions() {
   return (
-    <div>
-        <CodeIcon/>
-        <p>Code</p>
+    <div className='discussions'>
+        <ChatBubbleOutlineIcon/>
+        <span>Discussion</span>
     </div>
   )
 }

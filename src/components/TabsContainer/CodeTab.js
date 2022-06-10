@@ -6,7 +6,7 @@ function CodeTab() {
   return (
     <div className='code-tab'>
         <CodeIcon/>
-        <p>Code</p>
+        <span>Code</span>
     </div>
   )
 }

@@ -1,12 +1,12 @@
 import React from 'react'
 import "./IssuesTab.css"
-import CodeIcon from '@mui/icons-material/Code';
+import BugReportIcon from '@mui/icons-material/BugReport';
 
 
 function IssuesTab() {
   return (
     <div className='issues-tab'>
-        <CodeIcon/>
+        <BugReportIcon/>
         <p>Issues</p>
     </div>
   )

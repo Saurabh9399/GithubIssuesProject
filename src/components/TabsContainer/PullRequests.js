@@ -1,13 +1,12 @@
 import React from 'react'
 import "./PullRequests.css"
-import CodeIcon from '@mui/icons-material/Code';
-
+import CompareArrowsIcon from '@mui/icons-material/CompareArrows';
 
 function PullRequests() {
   return (
     <div>
-        <CodeIcon/>
-        <p>Pull Requests</p>
+        <CompareArrowsIcon/>
+        <span>Pull Requests</span>
     </div>
   )
 }
