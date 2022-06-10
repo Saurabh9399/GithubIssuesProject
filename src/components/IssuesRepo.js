@@ -1,9 +1,16 @@
 import React from 'react'
 import "./IssuesRepo.css"
+import IssuesRepoLeft from './IssuesRepoLeft'
+import IssuesRepoRight from './IssuesRepoRight'
+
 
 function IssuesRepo() {
   return (
-    <div>IssuesRepo</div>
+    <div className='issuesrepo'>
+        <IssuesRepoLeft/>
+        <IssuesRepoRight/>
+
+    </div>
   )
 }
 

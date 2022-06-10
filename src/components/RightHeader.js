@@ -3,7 +3,7 @@ import "./RightHeader.css"
 
 function RightHeader() {
   return (
-    <div>RightHeader</div>
+    <div className='right-header'>RightHeader</div>
   )
 }
 

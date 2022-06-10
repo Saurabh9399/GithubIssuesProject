@@ -1,0 +1,11 @@
+.issuesrepo{
+        width:99%;
+        height: 3rem;
+        display: flex;
+        padding: 0.3rem;
+        border: 2px solid grey;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0.2rem;
+}

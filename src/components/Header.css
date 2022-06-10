@@ -1,0 +1,15 @@
+.header{
+    width:99%;
+    height: 3rem;
+    display: flex;
+    padding: 0.6rem;
+    border: 2px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.3rem;
+    margin-top: 0;
+    background-color: #161B22;
+    color:whitesmoke;
+    box-shadow: 2px 2px ;
+}

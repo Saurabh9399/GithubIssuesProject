@@ -3,7 +3,7 @@ import "./LeftHeader.css"
 
 function LeftHeader() {
   return (
-    <div>LeftHeader</div>
+    <div className='left-header'> LeftHeader</div>
   )
 }
 

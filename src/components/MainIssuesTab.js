@@ -3,7 +3,9 @@ import "./MainIssuesTab.css"
 
 function MainIssuesTab() {
   return (
-    <div>MainIssuesTab</div>
+    <div className='main-issue-tab'>
+        
+    </div>
   )
 }
 
