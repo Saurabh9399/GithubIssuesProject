@@ -1,5 +1,5 @@
 import React from 'react'
-import "./MainIssuesTab.css"
+import "./MainIssuesContainer.css"
 
 function MainIssuesTab() {
   return (

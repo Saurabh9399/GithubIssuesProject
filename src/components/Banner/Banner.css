@@ -1,0 +1,11 @@
+.banner{
+    width: 80%;
+    height: 6rem;
+    border: 1px solid rgb(218, 211, 211);
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}

@@ -7,7 +7,7 @@ function IssuesTab() {
   return (
     <div className='issues-tab'>
         <BugReportIcon/>
-        <span>Issues</span>
+        <span className='issues-tab-name'>Issues</span>
     </div>
   )
 }
