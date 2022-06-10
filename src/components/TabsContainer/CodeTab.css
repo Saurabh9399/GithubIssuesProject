@@ -1,3 +1,6 @@
 .code-tab{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem 1rem 0rem 1rem;
 }

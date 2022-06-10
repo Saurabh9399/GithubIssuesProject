@@ -1,4 +1,6 @@
 .tabs-container{
+    width: 99%;
     display: flex;
-    
+    justify-content: flex-start;
+    border: 1px solid black;
 }
