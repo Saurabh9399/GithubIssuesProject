@@ -1,0 +1,8 @@
+.main-issues-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid whitesmoke;
+    width: 80%;
+    height: 100vh;
+}

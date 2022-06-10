@@ -1,12 +1,15 @@
 import React from 'react'
+import IssuesContainerLeft from './IssuesContainerLeft'
+import IssuesContainerRight from './IssuesContainerRight'
 import "./MainIssuesContainer.css"
 
-function MainIssuesTab() {
+function MainIssuesContainer() {
   return (
-    <div className='main-issue-tab'>
-        
+    <div className='main-issues-container'>
+        <IssuesContainerLeft/>
+        <IssuesContainerRight/>
     </div>
   )
 }
 
-export default MainIssuesTab
+export default MainIssuesContainer
