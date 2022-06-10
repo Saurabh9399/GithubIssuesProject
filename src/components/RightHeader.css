@@ -3,4 +3,7 @@
     height: 1rem;
     padding: 1rem;
     border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
