@@ -1,0 +1,8 @@
+.issues-right{
+    width: 30%;
+    height: 2rem;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+}

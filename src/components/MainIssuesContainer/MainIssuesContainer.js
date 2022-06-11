@@ -1,6 +1,7 @@
 import React from 'react'
-import IssuesContainerLeft from './IssuesContainerLeft'
-import IssuesContainerRight from './IssuesContainerRight'
+import IssuesContainerLeft from './IssuesContainerLeft/IssuesContainerLeft'
+import IssuesContainerRight from './IssuesContainerRight/IssuesContainerRight'
+
 import "./MainIssuesContainer.css"
 
 function MainIssuesContainer() {

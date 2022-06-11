@@ -1,0 +1,14 @@
+.closed-issues{
+    display: flex;
+    
+}
+
+.closed-issues-name{
+    font-size: small;
+    font-weight: bold;
+}
+
+#closed-issues-icon{
+    font-size: 20px;
+    margin-left: 0.3rem;
+}

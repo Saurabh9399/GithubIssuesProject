@@ -1,0 +1,14 @@
+.opened-issues{
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+}
+.opened-issues-name{
+    font-size: small;
+    font-weight: bold;
+}
+
+#opened-issues-icon{
+    font-size: 20px;
+    margin-left: 0.3rem;
+}
