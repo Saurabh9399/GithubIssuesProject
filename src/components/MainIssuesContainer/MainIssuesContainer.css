@@ -1,9 +1,21 @@
 .main-issues-container{
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    flex-direction: column;
     border: 1px solid whitesmoke;
     width: 80%;
     height: 100vh;
     padding: 1rem;
+}
+
+.main-issues-nav{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.main-issues-display{
+
+    border: 1px solid red;
+
 }
