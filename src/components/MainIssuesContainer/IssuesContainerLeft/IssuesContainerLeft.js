@@ -3,10 +3,10 @@ import ClosedIssues from './ClosedIssues'
 import './IssuesContainerLeft.css'
 import OpenedIssues from './OpenedIssues'
 
-function IssuesContainerLeft() {
+function IssuesContainerLeft({setOpenIssues}) {
   return (
     <div className='issues-container-left'>
-        <OpenedIssues/>
+        <OpenedIssues setOpenIssues={setOpenIssues}/>
         <ClosedIssues/>
     </div>
   )

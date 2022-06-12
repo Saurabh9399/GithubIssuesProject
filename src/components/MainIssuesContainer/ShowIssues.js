@@ -1,13 +1,16 @@
 import React from 'react'
+import OneIssue from './OneIssue'
 import "./ShowIssues.css"
 
-function ShowIssues() {
+function ShowIssues(props) {
+
+  console.log("data item",props.openedIssues);
+
   return (
     <div className='show-issues'>
-        <li>abcd</li>
-        <li>adfjs</li>
-        <li>nwf</li>
-        <li>kjfn</li>
+    {props.openedIssues.map((item) => {
+        return <OneIssue data={item}/>
+    })}
 
     </div>
   )
