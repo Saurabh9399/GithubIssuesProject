@@ -1,12 +1,15 @@
 .one-issue{
     display: flex;
     flex-direction: column;
-    border: 1px solid blue;
+    /* align-items: center; */
+    justify-content: flex-start;
+    padding: 0.5rem;
+    border-bottom: 1px solid whitesmoke;
 }
 
 .one-issue-title-icon{
     display: flex;
-    width: 50%;
+    width: 80%;
     align-items: center;
     justify-content: flex-start;
     padding: 0rem 0.5rem;
@@ -19,6 +22,7 @@
     margin: 0rem 0.5rem;
     font-size: 1.1rem;
     font-weight: bolder;
+    color: rgb(215, 209, 200);
 }
 
 #one-issue-icon{
@@ -29,6 +33,9 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-left: 2rem;
-    font-size: 0.8rem;
+    margin-left:6rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    color: antiquewhite;
 }

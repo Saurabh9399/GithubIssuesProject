@@ -8,7 +8,7 @@ function ShowIssues(props) {
 
   return (
     <div className='show-issues'>
-    {props.openedIssues.map((item) => {
+    {props.openedIssues.map((item) => { 
         return <OneIssue data={item}/>
     })}
 

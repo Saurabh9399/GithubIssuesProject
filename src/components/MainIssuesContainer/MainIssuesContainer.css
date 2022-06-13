@@ -3,7 +3,7 @@
     flex-direction: column;
     border: 1px solid whitesmoke;
     width: 80%;
-    height: 100vh;
+    height: auto;
     padding: 1rem;
 }
 
@@ -12,10 +12,12 @@
     align-items: flex-start;
     justify-content: space-between;
     margin-bottom: 1rem;
+    border-bottom: 1px solid whitesmoke;
+    padding: 1rem;
 }
 
 .main-issues-display{
-
-    border: 1px solid red;
+    
+    /* border: 1px solid red; */
 
 }

@@ -12,7 +12,7 @@ function OneIssue(props) {
              <div className='one-issue-title'>{props.data.title}</div>
         </div>
         <div className='one-issue-description'>
-            {/* <p><span className='one-issue-id'>{props.item.id}</span> opened on <span className='one-issue-date'>{props.item.date}</span> by <span>[created person name]</span> </p> */}
+            <p><span className='one-issue-id'>{props.data.id}</span> opened on <span className='one-issue-date'>{props.data.date}</span> by <span>[created by]</span> </p>
         </div>
     </div>
   )
