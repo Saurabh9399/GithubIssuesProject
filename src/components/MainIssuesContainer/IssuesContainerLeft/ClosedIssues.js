@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import "./ClosedIssues.css"
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
-function ClosedIssues({ setClosedIssues }) {
+function ClosedIssues({ setClosedIssues,handleOpenClick }) {
   useEffect(() => {
     fetchData();
   },[])
@@ -18,7 +18,7 @@ function ClosedIssues({ setClosedIssues }) {
   return (
     <div className='closed-issues'>
         <div className='closed-issues-icon'><CheckCircleOutlineIcon id="closed-issues-icon"/></div>
-        <div className='closed-issues-name'>Closed Issues</div>
+        <div className='closed-issues-name' onClick={handleOpenClick}>Closed Issues</div>
     </div>
   )
 }

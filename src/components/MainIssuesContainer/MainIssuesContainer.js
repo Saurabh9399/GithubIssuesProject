@@ -8,17 +8,30 @@ function MainIssuesContainer() {
   const [openIssues,setOpenIssues] = useState([]);
   const [closedIssues,setClosedIssues] = useState([]);
 
-  console.log("data",openIssues);
+  const [openClick,setOpenClick] = useState(false);
+
+  const handleOpenClick = () => {
+    setOpenClick(!openClick);
+  }
+
+  // console.log("data",openIssues);
+  console.log("closed issues",closedIssues);
+  console.log("openClick",openClick);
   
   return (
     <div className='main-issues-container'>
         <div className='main-issues-nav'>
-            <IssuesContainerLeft setOpenIssues={setOpenIssues} setClosedIssues={setClosedIssues}/>
-            <IssuesContainerRight />
-        </div>
-        <div className='main-issues-display'>
-            <ShowIssues openedIssues={openIssues} closedIssues={closedIssues}/>
-        </div>
+            <IssuesContainerLeft  
+              setOpenIssues={setOpenIssues}  
+              setClosedIssues={setClosedIssues}  
+              handleOpenClick={handleOpenClick}  
+            /> 
+            <IssuesContainerRight /> 
+        </div> 
+        <div className='main-issues-display'> 
+        {(openClick ? (<ShowIssues Issues={openIssues}/>):(<ShowIssues Issues={closedIssues}/>))}
+ 
+        </div> 
     </div>
   )
 }

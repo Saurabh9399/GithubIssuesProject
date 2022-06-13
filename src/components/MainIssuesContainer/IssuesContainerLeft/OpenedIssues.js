@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import "./OpenedIssues.css"
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 
-function OpenedIssues({ setOpenIssues }) {
+function OpenedIssues({ setOpenIssues,handleOpenClick }) {
 
   // const [openIssues,setOpenIssues] = useState([]);
 
@@ -24,7 +24,7 @@ function OpenedIssues({ setOpenIssues }) {
   return (
     <div className='opened-issues'>
         <div className='opened-issues-icon'><ArrowCircleRightIcon id="opened-issues-icon"/></div>
-        <div className='opened-issues-name'>Opened Issues</div>
+        <div className='opened-issues-name' onClick={handleOpenClick}>Opened Issues</div>
     </div>
   )
 }
