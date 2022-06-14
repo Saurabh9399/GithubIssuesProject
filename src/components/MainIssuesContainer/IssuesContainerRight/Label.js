@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "./Label.css"
 
-function Label() {
+function Label({onChangeLabel}) {
   const [labelArray,setLabelArray] = useState([]);
   // console.log("label array",labelArray);
 
@@ -18,6 +18,13 @@ function Label() {
         });
   };
 
+  const handleChangeLabel = (e) =>{
+    e.preventDefault();
+    onChangeLabel(e.target.value);
+  }
+
+  
+
   return (
     <div className='label'>
         <label for="labels">Labels:</label>
@@ -25,12 +32,11 @@ function Label() {
         <option value="volvo">{"sssdd"}</option>
         </select> */}
         
-        <select name="labels" id="labels">
-        
+        <select name="labels" id="labels" onChange={handleChangeLabel}>
           {
             labelArray.map((item) => {
             
-              return <option>{item.name}</option>
+              return <option value={item.name}>{item.name}</option>
           
           })}
 
