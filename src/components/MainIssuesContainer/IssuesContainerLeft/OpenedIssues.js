@@ -11,7 +11,7 @@ function OpenedIssues({ setOpenIssues,handleOpenClick }) {
   },[])
   
   const fetchData = async () => {
-      await fetch("https://api.github.com/repos/pallets/click/issues?state=open")
+      await fetch("https://api.github.com/repos/pallets/click/issues?per_page=100&state=open")
         .then((res) => res.json())
         .then((data) => setOpenIssues(data))
         .catch((err) => {

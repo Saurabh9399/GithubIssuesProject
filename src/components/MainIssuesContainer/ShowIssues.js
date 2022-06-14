@@ -9,7 +9,7 @@ function ShowIssues(props) {
   return (
     <div className='show-issues'>
         {props.Issues.map((item) => { 
-            return <OneIssue data={item}/>
+            return <OneIssue key={item.id}  data={item}/>
         })}
     </div>
   )

@@ -8,6 +8,10 @@ function IssuesContainerLeft({setOpenIssues,setClosedIssues,handleOpenClick}) {
     <div className='issues-container-left'>
         <OpenedIssues setOpenIssues={setOpenIssues} handleOpenClick={handleOpenClick} />
         <ClosedIssues setClosedIssues={setClosedIssues} handleOpenClick={handleOpenClick}/>
+        <div>
+        <span>Days</span>
+        <input type="number" min="0" name="days"/>
+        </div>
     </div>
   )
 }

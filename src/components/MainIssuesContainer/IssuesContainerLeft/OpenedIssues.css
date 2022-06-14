@@ -7,6 +7,9 @@
     font-size: 15px;
     font-weight: bold;
 }
+.opened-issues-name:hover{
+    border-bottom: 1px solid white;
+}
 
 #opened-issues-icon{
     font-size: 20px;

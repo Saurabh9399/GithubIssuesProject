@@ -3,15 +3,15 @@ import Assignee from './Assignee'
 import Author from './Author'
 import "./IssuesContainerRight.css"
 import Label from './Label'
-import Projects from './Projects'
+// import Projects from './Projects'
 
-function IssuesContainerRight() {
+function IssuesContainerRight({openIssues}) {
   return (
     <div className='issues-container-right'>
         <Author/>
-        <Label/>
-        <Projects/>
-        <Assignee/>
+        <Label openIssues={openIssues}/>
+        {/* <Projects/> */}
+        <Assignee openIssues={openIssues}/>
     </div>
   )
 }

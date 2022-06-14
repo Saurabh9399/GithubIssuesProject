@@ -4,7 +4,7 @@
     /* align-items: center; */
     justify-content: flex-start;
     padding: 0.5rem;
-    border-bottom: 1px solid whitesmoke;
+    border-bottom: 1px solid rgb(161, 158, 158);
 }
 
 .one-issue-title-icon{

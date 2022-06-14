@@ -7,7 +7,6 @@ import ShowIssues from './ShowIssues'
 function MainIssuesContainer() {
   const [openIssues,setOpenIssues] = useState([]);
   const [closedIssues,setClosedIssues] = useState([]);
-
   const [openClick,setOpenClick] = useState(false);
 
   const handleOpenClick = () => {
@@ -26,7 +25,7 @@ function MainIssuesContainer() {
               setClosedIssues={setClosedIssues}  
               handleOpenClick={handleOpenClick}  
             /> 
-            <IssuesContainerRight /> 
+            <IssuesContainerRight openIssues={openIssues}/> 
         </div> 
         <div className='main-issues-display'> 
         {(openClick ? (<ShowIssues Issues={openIssues}/>):(<ShowIssues Issues={closedIssues}/>))}

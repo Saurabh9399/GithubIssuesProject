@@ -8,6 +8,10 @@
     font-weight: bold;
 }
 
+.closed-issues-name:hover{
+    border-bottom: 1px solid white;
+}
+
 #closed-issues-icon{
     font-size: 20px;
     margin-left: 0.3rem;

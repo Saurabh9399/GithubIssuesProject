@@ -9,13 +9,11 @@ import TabsContainer from './components/TabsContainer/TabsContainer';
 function App() {
   return (
     <div className="App">
-
         <Header/>
         <IssuesRepo/> 
-        <TabsContainer/>
-        <Banner/>
-        <MainIssuesContainer/>
-
+        <TabsContainer/> 
+        <Banner/> 
+        <MainIssuesContainer/> 
     </div>
   );
 }

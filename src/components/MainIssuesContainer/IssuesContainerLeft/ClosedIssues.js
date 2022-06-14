@@ -8,7 +8,7 @@ function ClosedIssues({ setClosedIssues,handleOpenClick }) {
   },[])
   
   const fetchData = async () => {
-      await fetch("https://api.github.com/repos/pallets/click/issues?state=closed")
+      await fetch("https://api.github.com/repos/pallets/click/issues?per_page=150&state=closed")
         .then((res) => res.json())
         .then((data) => setClosedIssues(data))
         .catch((err) => {
