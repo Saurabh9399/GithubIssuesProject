@@ -12,7 +12,7 @@ function OneIssue(props) {
              <div className='one-issue-title'>{props.data.title}</div>
         </div>
         <div className='one-issue-description'>
-            <p><span className='one-issue-id'>{props.data.state}</span> opened on <span className='one-issue-date'>{props.data.created_at}</span> by <span>{props.data.user.login}</span><span>{props.data.labels.map((element)=>{return element.name})}</span> </p>
+            <p><span className='one-issue-id'>{props.data.id}</span> opened on <span className='one-issue-date'>{props.data.created_at}</span> by <span>{props.data.user.login}</span> </p>
         </div>
     </div>
   )
