@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
 import Login from './components/Authentication/Login';
 import SignUp from './components/Authentication/SignUp';
+import { Paginate } from './components/MainIssuesContainer/Paginate';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -16,6 +17,8 @@ root.render(
       <Route path='/' element={<App/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/signup' element={<SignUp/>}/>
+      <Route path='/paginate' element={<Paginate/>}/>
+
     </Routes>
   </Router>
   </React.StrictMode>

@@ -9,14 +9,28 @@ function MainIssuesContainer() {
   const [AllIssues, setAllIssues] = useState([]);
   // const [AllIssuesState, setAllIssuesState] = useState();
   const [currentIssues, setCurrentIssues] = useState([]);
+  // urls array
+  let urlArray = [];
+
   const [issueState, setIssueState] = useState();
 
   const [label, setLabel] = useState();
   const [assignee, setAssignee] = useState();
 
-  useEffect(()=>{
+  // page number
+  const [pageNumber,setPageNumber] = useState(1);
+
+  useEffect(() => {
     fetchData();
+  }, []);
+
+  useEffect(() => {
+    Fun();
   },[])
+
+  // useEffect(() => {
+  //   fetchDataFromUrlArray();
+  // },[])
 
   useEffect(() => {
     console.log("change Label", label);
@@ -26,14 +40,16 @@ function MainIssuesContainer() {
   }, [label]);
 
   useEffect(() => {
-    setCurrentIssues(Issues.filter(issue => issue.state === issueState));
-  },[issueState])
+    setCurrentIssues(Issues.filter((issue) => issue.state === issueState));
+  }, [issueState]);
 
   const iterateIssueForLabel = (label) => {
-    setCurrentIssues(Issues.filter((element) => {
-      return filterLabel(element, label)
-    }))
-  }
+    setCurrentIssues(
+      Issues.filter((element) => {
+        return filterLabel(element, label);
+      })
+    );
+  };
   // const iterateIssueForAssignee=(assignee)=>{
   //   setCurrentIssues(Issues.filter((element)=>{
   //     return filterLabel(element, assignee)
@@ -41,21 +57,74 @@ function MainIssuesContainer() {
   //   }))
   // }
   const fetchData = async () => {
-    await fetch("https://api.github.com/repos/pallets/click/issues?state=all&per_page=100")
-      .then((res) => res.json())
+    await fetch(
+      "https://api.github.com/repos/pallets/click/issues?state=all&page=1"
+    )
+      .then((res) => {
+        // console.log(res.headers , "res123")
+        let page_no = 1;
+
+        for (var pair of res.headers.entries()) {
+          if (pair[0] === "link") {
+            let urlStringArray = pair[1].split(",");
+            console.log("urlStringArray", urlStringArray);
+            urlStringArray.forEach((element) => {
+              let relationString = element.split(";")[1].trim();
+              let relation = relationString
+                .split("=")[1]
+                .replace('"', " ")
+                .replace('"', " ")
+                .trim();
+              if (relation === "last") {
+                console.log(relation);
+                let url = element
+                  .split(";")[0]
+                  .replace("<", " ")
+                  .replace(">", " ")
+                  .trim();
+                console.log(url);
+                page_no = parseInt(url.split("&")[1].split("=")[1]);
+                setPageNumber(page_no);
+                console.log(pageNumber);
+              }
+            });
+          }
+          console.log(pair[0] + ": " + pair[1], "abc");
+        }
+        return res.json();
+      })
       .then((data) => setIssues(data))
       .catch((err) => {
         console.log(err);
       });
-};
 
-  
+  };
+
+  // pushing all page urls to urlArray
+  for (let i = 2; i <= pageNumber; i++) {
+    urlArray.push(
+      "https://api.github.com/repos/pallets/click/issues?state=all&page="+i
+    );
+  }
+
+  const Fun = async () => {
+    
+    for(let i=2;i<urlArray.length;i++){
+      console.log("Inside for")
+      await fetch(urlArray[i])
+      .then((res) => res.json())
+      .then((data) => setIssues(...Issues,data))
+      
+    }
+    
+  }
+  console.log("urlArray", urlArray);
 
   const onAllIssuesChange = (value) => {
     setAllIssues(Issues);
     setIssueState(value);
-    console.log("allissuesclick",value);
-  }
+    console.log("allissuesclick", value);
+  };
 
   const onChangeLabel = (value) => {
     setLabel(value);
@@ -67,23 +136,21 @@ function MainIssuesContainer() {
 
   const onChangeState = (value) => {
     setIssueState(value);
-    setAllIssues(Issues.filter(issue => issue.state === issueState));
-    console.log("IssuesState",value);
-  }
+    setAllIssues(Issues.filter((issue) => issue.state === issueState));
+    console.log("IssuesState", value);
+  };
 
   const LabelHelper = (issue, label) => {
-    let issue_labels = issue.labels
-    let label_present = false
-    issue_labels.forEach(element => {
-      console.log(element.name)
-      if(element.name === label){
-        label_present = true
+    let issue_labels = issue.labels;
+    let label_present = false;
+    issue_labels.forEach((element) => {
+      console.log(element.name);
+      if (element.name === label) {
+        label_present = true;
       }
-      
     });
-    return label_present
-
-  }
+    return label_present;
+  };
 
   // const AssigneeHelper = (issue, assignee) => {
   //   let issue_assignee =  issue.assignees
@@ -93,18 +160,18 @@ function MainIssuesContainer() {
   //     if(element.login === assignee){
   //       assignee_present = true
   //     }
-      
+
   //   });
   //   return assignee_present
 
   // }
 
   const filterLabel = (issue, label) => {
-    if(issue.state === issueState && LabelHelper(issue, label)){
-      return true
+    if (issue.state === issueState && LabelHelper(issue, label)) {
+      return true;
     }
-      return false
-  }
+    return false;
+  };
 
   // const filterAssignee = (issue, assignee) => {
   //   if(issue.state === issueState && AssigneeHelper(issue, assignee)){
@@ -113,10 +180,18 @@ function MainIssuesContainer() {
   //     return false
   // }
 
-
   // console.log("data",openIssues);
   // console.log("closed issues", closedIssues);
   // console.log("openClick", openClick);
+
+  // const fetchDataFromUrlArray = async () => {
+
+  //   console.log("urlArray fetching data",Issues);
+
+     
+    
+
+  // }
 
   return (
     <div className="main-issues-container">
@@ -132,7 +207,13 @@ function MainIssuesContainer() {
         />
       </div>
       <div className="main-issues-display">
-      {<ShowIssues currentIssues={currentIssues}  AllIssues={AllIssues} issueState={issueState}/>}
+        {
+          <ShowIssues
+            currentIssues={currentIssues}
+            AllIssues={AllIssues}
+            issueState={issueState}
+          />
+        }
       </div>
     </div>
   );

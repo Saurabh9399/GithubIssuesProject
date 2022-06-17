@@ -8,19 +8,28 @@
     padding: 1rem;
 }
 .header-search-box input{
-    padding: 0.3rem;
+    padding: 0.1rem;
     width: 15rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    background-color: #0E1117;
+    border: 0.00000001rem solid whitesmoke;
+    padding-left: 0.4rem;
+    color: white;
 }
 .header-search-box input:hover{
     transition: all 0.5s ease-in;
     width: 18rem;
-    background-color: rgb(214, 210, 210);
+    background-color: #161B22;
+    border: 0.2px solid whitesmoke;
+
+    
 }
 .github-logo{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 1000;
     border: 0.5px solid whitesmoke;
-    padding: 0.2rem;
+    padding: 0.1rem 0.2rem;
 }
 
 .left-header img{

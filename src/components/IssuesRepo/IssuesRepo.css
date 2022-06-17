@@ -3,9 +3,10 @@
         height: 3rem;
         display: flex;
         padding: 0.3rem;
-        border: 0.5px solid grey;
+        /* border: 0.5px solid grey; */
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin: 0.2rem;
+        color: #0E1117;
 }

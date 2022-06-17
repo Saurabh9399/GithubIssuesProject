@@ -31,7 +31,7 @@ function Assignee({onChangeAssignee}) {
       {
           assigneesArray.map((item) => {
             
-              return <option value={item.login}>{item.login}</option>
+              return <option key={item.id} value={item.login}>{item.login}</option>
           
           })}
       </select>

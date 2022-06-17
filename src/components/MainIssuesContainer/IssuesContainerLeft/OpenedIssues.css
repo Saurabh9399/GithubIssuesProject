@@ -1,19 +1,23 @@
 .opened-issues{
     display: flex;
-    /* align-items: center;
-    justify-content: center; */
+    /* align-items: center; */
+    justify-content: center;
 }
 .opened-issues-name{
     font-size: 15px;
     font-weight: bold;
+    color: #0E1117;
+
 }
 .opened-issues-name:hover{
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid grey;
     cursor: pointer;
 
 }
 
 #opened-issues-icon{
     font-size: 20px;
-    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+    color: rgb(62, 99, 7);
+
 }

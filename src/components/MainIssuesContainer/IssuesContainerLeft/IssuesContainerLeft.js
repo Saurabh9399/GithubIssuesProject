@@ -4,7 +4,7 @@ import ClosedIssues from './ClosedIssues'
 import './IssuesContainerLeft.css'
 import OpenedIssues from './OpenedIssues'
 
-function IssuesContainerLeft({onChangeState,onAllIssuesChange,AllIssuesState}) {
+function IssuesContainerLeft({onChangeState,onAllIssuesChange}) {
   return (
     <div className='issues-container-left'>
         <AllIssues onAllIssuesChange={onAllIssuesChange} />

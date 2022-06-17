@@ -37,7 +37,7 @@ function Label({onChangeLabel}) {
           {
             labelArray.map((item) => {
             
-              return <option value={item.name}>{item.name}</option>
+              return <option key={item.id} value={item.name}>{item.name}</option>
           
           })}
 

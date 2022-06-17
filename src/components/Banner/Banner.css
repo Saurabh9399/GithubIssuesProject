@@ -1,20 +1,24 @@
 .banner{
     width: 80%;
     height: auto;
-    border: 1px solid #00FFFF;
+    border: 1px solid #c9c9c9;
     margin: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 1rem;
+    border-radius: 5px;
 }
 .banner-title{
-    color: greenyellow;
+    color: #0E1117;
+    font-weight: bold;
 }
 .banner-desc{
-    color: greenyellow;
+    color: #58A6FF;
 }
 #smile-icon{
-    font-size: 2rem;
+    font-size: 1.5rem;
+    color: #FFB600;
+    margin-bottom: 0.5rem;
 }

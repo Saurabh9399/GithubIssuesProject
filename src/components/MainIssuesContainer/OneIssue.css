@@ -4,7 +4,7 @@
     /* align-items: center; */
     justify-content: flex-start;
     padding: 0.5rem;
-    border-bottom: 1px solid #00FFFF;
+    border-bottom: 1px solid #c9c9c9;
 }
 
 .one-issue-title-icon{
@@ -22,7 +22,7 @@
     margin: 0rem 0.5rem;
     font-size: 1.1rem;
     font-weight: bolder;
-    color: rgb(215, 209, 200);
+    color:  #0E1117;
 }
 
 #one-issue-icon{
@@ -37,7 +37,7 @@
     font-size: 0.9rem;
     font-weight: 500;
     letter-spacing: 0.1rem;
-    color: antiquewhite;
+    color: grey;
 }
 
 #label{

@@ -1,9 +1,23 @@
 #allissues{
     font-weight: bold;
-    
+}
+.all-issues{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#allissues:hover{
+    border-bottom: 1px solid grey;
+    cursor: pointer;
 }
 
-#allissues:hover{
-    border-bottom: 1px solid white;
-    cursor: pointer;
+#closed-issues-icon{
+    font-size: 20px;
+    margin-right: 0.3rem;
+    color: rgb(62, 99, 7);
+}
+
+.closed-issues-name{
+    font-size: 15px;
+    font-weight: bold;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import OneIssue from "./OneIssue";
+// import { Paginate } from "./Paginate";
 import "./ShowIssues.css";
 
 function ShowIssues(props) {
@@ -7,6 +8,8 @@ function ShowIssues(props) {
   console.log("data state", props.issueState);
 
   return (
+    // <Paginate>
+
     <div className="show-issues">
       {props.issueState !== "allissues"
         ? props.currentIssues.map((item) => {
@@ -16,6 +19,7 @@ function ShowIssues(props) {
             return <OneIssue key={item.id} data={item} />;
           })}
     </div>
+    // </Paginate>
   );
 }
 
