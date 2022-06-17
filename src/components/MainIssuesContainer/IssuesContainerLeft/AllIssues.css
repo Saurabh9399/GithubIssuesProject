@@ -1,0 +1,9 @@
+#allissues{
+    font-weight: bold;
+    
+}
+
+#allissues:hover{
+    border-bottom: 1px solid white;
+    cursor: pointer;
+}

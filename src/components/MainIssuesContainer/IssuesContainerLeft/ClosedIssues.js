@@ -16,7 +16,7 @@ function ClosedIssues({ onChangeState }) {
   //       });
   // };
 
-  const handleCloseClick = (e) =>{
+  const handleCloseClick = (e) => {
     e.preventDefault();
 
     onChangeState(e.target.id);

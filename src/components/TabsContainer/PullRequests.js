@@ -5,7 +5,7 @@ import CompareArrowsIcon from '@mui/icons-material/CompareArrows';
 function PullRequests() {
   return (
     <div className='pull-requests'>
-        <CompareArrowsIcon/>
+        <CompareArrowsIcon id="pull-icon"/>
         <span>Pull Requests</span>
     </div>
   )

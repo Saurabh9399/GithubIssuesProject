@@ -6,7 +6,7 @@ import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 function Discussions() {
   return (
     <div className='discussions'>
-        <ChatBubbleOutlineIcon/>
+        <ChatBubbleOutlineIcon id="discussions-icon"/>
         <span>Discussion</span>
     </div>
   )

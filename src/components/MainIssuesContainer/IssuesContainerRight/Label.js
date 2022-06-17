@@ -27,12 +27,13 @@ function Label({onChangeLabel}) {
 
   return (
     <div className='label'>
-        <label for="labels">Labels:</label>
+        <label for="labels">Labels :</label>
         {/* <select name="cars" id="cars">
         <option value="volvo">{"sssdd"}</option>
         </select> */}
         
         <select name="labels" id="labels" onChange={handleChangeLabel}>
+        {/* <option value="all">All</option> */}
           {
             labelArray.map((item) => {
             

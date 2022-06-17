@@ -6,7 +6,7 @@ import BugReportIcon from '@mui/icons-material/BugReport';
 function IssuesTab() {
   return (
     <div className='issues-tab'>
-        <BugReportIcon/>
+        <BugReportIcon id="issues-icon"/>
         <span className='issues-tab-name'>Issues</span>
     </div>
   )

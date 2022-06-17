@@ -1,5 +1,7 @@
 .assignee{
     font-weight: bold;
     font-size: 0.8rem;
-
+}
+#assignee{
+    margin-left: 4px;
 }

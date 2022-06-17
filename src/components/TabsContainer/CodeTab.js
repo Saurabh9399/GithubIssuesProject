@@ -1,11 +1,11 @@
 import React from 'react'
-import "./CodeTab.css"
 import CodeIcon from '@mui/icons-material/Code';
+import "./CodeTab.css"
 
 function CodeTab() {
   return (
     <div className='code-tab'>
-        <CodeIcon/>
+        <CodeIcon id="code-icon"/>
         <span>Code</span>
     </div>
   )

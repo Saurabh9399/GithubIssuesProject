@@ -8,7 +8,7 @@ function IssuesRepoLeft() {
       <i><MoveToInboxIcon className='issues-repo-left-icon'/></i>
       <span className='issues-repo-left-name'>pallets</span>
       <span>/</span> 
-      <span className='issues-repo-left-title'>jinja</span> 
+      <span className='issues-repo-left-title'>click</span> 
 
     </div>
   )

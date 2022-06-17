@@ -10,6 +10,8 @@
 
 .closed-issues-name:hover{
     border-bottom: 1px solid white;
+    cursor: pointer;
+
 }
 
 #closed-issues-icon{

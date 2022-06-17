@@ -26,7 +26,7 @@ function Assignee({onChangeAssignee}) {
 
   return (
     <div className='assignee'>
-      <label for="assignee">Assignee:</label>
+      <label for="assignee">Assignee :</label>
       <select name="assignee" id="assignee" onChange={handleChangeAssignee}>
       {
           assigneesArray.map((item) => {

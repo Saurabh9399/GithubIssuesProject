@@ -1,7 +1,7 @@
 .banner{
     width: 80%;
-    height: 6rem;
-    border: 1px solid rgb(218, 211, 211);
+    height: auto;
+    border: 1px solid #00FFFF;
     margin: 1rem;
     display: flex;
     flex-direction: column;
@@ -14,4 +14,7 @@
 }
 .banner-desc{
     color: greenyellow;
+}
+#smile-icon{
+    font-size: 2rem;
 }

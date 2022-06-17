@@ -4,3 +4,8 @@
     align-items: center;
     margin: 0rem 1rem 0rem 1rem;
 }
+
+#code-icon{
+    font-size: 1rem;
+    margin-right: 2px;
+}
